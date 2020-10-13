@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: normal;
+  font-style: normal;
+  src:  url(../fonts/OpenSans-Regular.woff2),
+        url(../fonts/OpenSans-Regular.woff),
+        url(../fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-style: normal; 
+  src: url(../fonts/OpenSans-Bold.woff2),
+       url(../fonts/OpenSans-Bold.woff),
+       url(../fonts/OpenSans-Bold.ttf);
+}
+
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: normal;
+  line-height: normal;  
+}
+
+.popup-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(34, 30, 25, 0.6);  
+}
+
+.popup {
+  position: relative;
+  z-index: 9999;
+  width: 390px;
+  margin: auto;
+  background-color: #ffffff;  
+}
+
+.popup-close {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer; 
+  position: absolute; 
+  text-indent: -9999px;
+  top: -24px;
+  right: 0;
+  width: 17px;
+  height: 17px;
+}
+
+.popup-close:hover,
+.popup-close:focus {
+  outline: none;
+}
+.popup-close::before {
+  content: "";
+  background-image: url(../svg/form-x.svg);
+  top: 0;
+  right: 0;
+  background-position: right 0 14px;
+  background-repeat: no-repeat;
+  width: 17px;
+  height: 17px;
+  background-size: 17px;
+  position: absolute;
+  z-index: 9999;  
+}
+
+.popup-container {
+  padding: 50px 30px;  
+}
+
+.popup-section {
+  margin-bottom: 26px;
+}
+
+.section-heading-wrap {
+  text-align: center;
+}
+
+.popup-heading {
+  font-size: 20px; 
+}
+
+.section-heading {
+  display: inline-block; 
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #0f0d0e;
+}
+
+.section-heading:after {
+  content:"";  
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 65px;
+  height: 3px;
+  margin-top: 14px;
+  background-color: rgba(181, 159, 91, 0.4);
+}
+  
+.popup-label {
+  font-family: inherit;
+  font-size: 13px;
+  color: #000000;
+  display: inline-block;
+}
+
+.popup-text {
+ margin-bottom: 10px;
+}
+
+.field,
+.button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.field {
+  background-color: #f4f7f6;
+  border: none;
+  box-sizing: border-box; 
+}
+
+.field:focus,
+.button:hover  {
+  outline: 1px solid #b59f5b;
+}
+
+.popup-field-text {
+  color: rgba(0, 0, 0, 0.54);
+  padding-left: 19px;  
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.popup-select {
+  height: 48px;
+  width: 100%;
+  background-image: url(../svg/form-arrows.svg);
+  background-size: 8px 17px;
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+
+.radio-group:nth-of-type(n+2) {
+  margin-left: 15px;
+}
+
+.radio {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px); height: 1px;
+  width: 1px;
+  }
+
+ .radio-group-text::before {
+   content: "";
+   display: inline-block; 
+   vertical-align: middle;
+   width: 18px;
+   height: 18px;
+   margin-right: 5px; 
+   background-image: url(../svg/form-empty-circle.svg);
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: 18px; 
+ }
+ 
+ .radio:checked ~ .radio-group-text::before {
+  background-image: url(../svg/form-circle.svg);
+}
+
+.popup-textarea {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 132px;
+  max-height: 132px;
+  padding: 20px;
+  resize: none;
+}
+
+.popup-button {
+  height: 47px;
+  background-color: #b59f5b; 
+}
+
+.button {
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: inherit;
+  border: none;  
+}
+
+@media (max-width:1199px) {
+  .radio-group:nth-of-type(n+2) {
+    margin-left: 15px;
+  }
+
+@media (max-width:1199px) and (min-width:641px) {
+  
+  .popup-heading {
+    font-size: 18px; 
+  }
+
+  .popup-close::before {
+    top: -36px;
+    width: 26px;
+    height: 26px;
+    background-size: 26px;
+  }
+}
+
+@media (max-width: 640px) {
+
+  .popup-heading {
+    font-size: 16px; 
+  }
+
+  .popup {
+    width: 330px;
+  }
+  
+  .popup-container {
+    padding: 30px 25px;  
+  }
+
+  .popup-close {
+    width: 28px;
+    height: 28px;
+  }
+
+  .popup-close::before {
+    top: -33px;
+    width: 28px;
+    height: 28px;
+    background-size: 28px;
+  }
+}

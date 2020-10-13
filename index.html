@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MQ diplom-Kucherenko</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <div class="popup-wrapper"> 
+      
+      <div class="popup"> 
+        <button class="popup-close button-close" type="button">Закрыть окно</button>
+
+        <form class="popup-container">
+          
+          <header class="popup-section section-heading-wrap">
+            <h3 class="popup-heading section-heading">Ваш фидбек</h3>
+          </header>
+           
+          <div class="popup-section">
+            <label class="popup-label popup-text" for="select">Как часто вы заходите на сайт?</label>
+            <select class="field popup-select popup-field-text" name="" id="select">
+              <option selected value="Почти каждый день">Почти каждый день</option>
+              <option value="Раз в несколько дней">Раз в несколько дней</option>
+              <option value="Раз в несколько недель">Раз в несколько недель</option>
+              <option value="Несколько раз в год">Несколько раз в год</option> 
+            </select>     
+          </div>
+           
+          <div class="popup-section">
+            <span class="popup-label popup-text" >Вы подписаны на e-mail рассылку?</span>
+            <div class="popup-radio-group">
+              <label class="radio-group">
+                <input class="radio" type="radio" name="radio-group">
+                <span class="radio-group-text popup-label">Да</span>
+              </label>  
+              <label class="radio-group">
+                <input class="radio" type="radio" name="radio-group">
+                <span class="radio-group-text popup-label">Нет</span>
+              </label>  
+            </div>
+          </div>  
+
+          <div class="popup-section popup-textarea-wrap">
+            <label class="popup-label popup-text" for="textarea">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</label> 
+            <textarea class="field popup-field-text popup-textarea" name="" id="textarea" cols="" rows="" placeholder="Может, больше рецептов?"></textarea>
+          </div>
+           
+          <button class="button popup-button">Отправить</button>
+        </form>
+      </div>
+    </div> 
+  </body>
+</html>
